@@ -3,13 +3,16 @@
 /**
  * Module dependencies.
  */
-
+//引入我们在app.js中导出的app模块
 var app = require('../app');
+//引入debuger模块，打印调试日志
 var debug = require('debug')('learningnodejs:server');
+//引入http模块
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
+ * //设置端口号
  */
 
 var port = normalizePort(process.env.PORT || '3000');
@@ -24,9 +27,11 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-
+//监听指定的端口
 server.listen(port);
+//监听error事件。 onError是发生错误的时候的回调函数
 server.on('error', onError);
+//监听listening事件
 server.on('listening', onListening);
 
 /**
