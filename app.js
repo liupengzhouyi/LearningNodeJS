@@ -11,7 +11,6 @@ var usersRouter = require('./routes/users');
 var myRoute = require('./routes/myRoute');
 var author = require('./routes/author');
 
-
 // 生产一个express的实例
 var app = express();
 
@@ -30,7 +29,7 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 //加载解析json的中间件
 app.use(express.json());
-//加载解析urlencoded请求体的中间件。  post请求
+//加载解析url encoded请求体的中间件。  post请求
 app.use(express.urlencoded({ extended: true }));
 //加载解析cookie的中间件
 app.use(cookieParser());
