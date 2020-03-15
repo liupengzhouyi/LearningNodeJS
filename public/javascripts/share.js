@@ -7,4 +7,3 @@ var readerStream2 = fs.createReadStream('../files/output.txt');
 var writeStream = fs.createWriteStream('../files/all.txt');
 
 readerStream1.pipe(writeStream);
-
